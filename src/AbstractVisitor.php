@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder;
 
 use Jojo1981\JsonPathAstBuilder\Ast\ArrayAccessor\ArrayAll;
@@ -47,7 +49,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param RootNode $rootNode
      * @return mixed
      */
-    public function visitRootNode(RootNode $rootNode)
+    public function visitRootNode(RootNode $rootNode): mixed
     {
         return null;
     }
@@ -56,7 +58,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param AnyChildField $anyChildField
      * @return mixed
      */
-    public function visitAnyChildField(AnyChildField $anyChildField)
+    public function visitAnyChildField(AnyChildField $anyChildField): mixed
     {
         return null;
     }
@@ -65,7 +67,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param Field $field
      * @return mixed
      */
-    public function visitField(Field $field)
+    public function visitField(Field $field): mixed
     {
         return null;
     }
@@ -74,7 +76,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param MultiField $field
      * @return mixed
      */
-    public function visitMultiField(MultiField $field)
+    public function visitMultiField(MultiField $field): mixed
     {
         return null;
     }
@@ -83,7 +85,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param RecursiveAnyField $recursiveAnyField
      * @return mixed
      */
-    public function visitRecursiveAnyField(RecursiveAnyField $recursiveAnyField)
+    public function visitRecursiveAnyField(RecursiveAnyField $recursiveAnyField): mixed
     {
         return null;
     }
@@ -92,7 +94,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param RecursiveField $recursiveField
      * @return mixed
      */
-    public function visitRecursiveField(RecursiveField $recursiveField)
+    public function visitRecursiveField(RecursiveField $recursiveField): mixed
     {
         return null;
     }
@@ -101,7 +103,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param ArrayAll $arrayAll
      * @return mixed
      */
-    public function visitArrayAll(ArrayAll $arrayAll)
+    public function visitArrayAll(ArrayAll $arrayAll): mixed
     {
         return null;
     }
@@ -110,7 +112,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param ArrayRandomAccess $arrayRandomAccess
      * @return mixed
      */
-    public function visitArrayRandomAccess(ArrayRandomAccess $arrayRandomAccess)
+    public function visitArrayRandomAccess(ArrayRandomAccess $arrayRandomAccess): mixed
     {
         return null;
     }
@@ -119,7 +121,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param ArraySlice $arraySlice
      * @return mixed
      */
-    public function visitArraySlice(ArraySlice $arraySlice)
+    public function visitArraySlice(ArraySlice $arraySlice): mixed
     {
         return null;
     }
@@ -128,7 +130,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param CurrentNode $currentNode
      * @return mixed
      */
-    public function visitCurrentNode(CurrentNode $currentNode)
+    public function visitCurrentNode(CurrentNode $currentNode): mixed
     {
         return null;
     }
@@ -137,7 +139,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param RecursiveFilterToken $recursiveFilterToken
      * @return mixed
      */
-    public function visitRecursiveFilterToken(RecursiveFilterToken $recursiveFilterToken)
+    public function visitRecursiveFilterToken(RecursiveFilterToken $recursiveFilterToken): mixed
     {
         return null;
     }
@@ -146,7 +148,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param SubQuery $subQuery
      * @return mixed
      */
-    public function visitSubQuery(SubQuery $subQuery)
+    public function visitSubQuery(SubQuery $subQuery): mixed
     {
         return null;
     }
@@ -155,7 +157,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param FilterDirectValueString $filterDirectValueString
      * @return mixed
      */
-    public function visitFilterDirectValueString(FilterDirectValueString $filterDirectValueString)
+    public function visitFilterDirectValueString(FilterDirectValueString $filterDirectValueString): mixed
     {
         return null;
     }
@@ -164,7 +166,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param FilterDirectValueNull $filterDirectValueNull
      * @return mixed
      */
-    public function visitFilterDirectValueNull(FilterDirectValueNull $filterDirectValueNull)
+    public function visitFilterDirectValueNull(FilterDirectValueNull $filterDirectValueNull): mixed
     {
         return null;
     }
@@ -173,7 +175,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param FilterDirectValueBoolean $filterDirectValueBoolean
      * @return mixed
      */
-    public function visitFilterDirectValueBoolean(FilterDirectValueBoolean $filterDirectValueBoolean)
+    public function visitFilterDirectValueBoolean(FilterDirectValueBoolean $filterDirectValueBoolean): mixed
     {
         return null;
     }
@@ -182,7 +184,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param FilterDirectValueInteger $filterDirectValueInteger
      * @return mixed
      */
-    public function visitFilterDirectValueInteger(FilterDirectValueInteger $filterDirectValueInteger)
+    public function visitFilterDirectValueInteger(FilterDirectValueInteger $filterDirectValueInteger): mixed
     {
         return null;
     }
@@ -191,7 +193,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param FilterDirectValueFloat $filterDirectValueFloat
      * @return mixed
      */
-    public function visitFilterDirectValueFloat(FilterDirectValueFloat $filterDirectValueFloat)
+    public function visitFilterDirectValueFloat(FilterDirectValueFloat $filterDirectValueFloat): mixed
     {
         return null;
     }
@@ -200,7 +202,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param BooleanFilter $booleanFilter
      * @return mixed
      */
-    public function visitBooleanFilter(BooleanFilter $booleanFilter)
+    public function visitBooleanFilter(BooleanFilter $booleanFilter): mixed
     {
         return null;
     }
@@ -209,7 +211,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param ComparisonFilter $comparisonFilter
      * @return mixed
      */
-    public function visitComparisonFilter(ComparisonFilter $comparisonFilter)
+    public function visitComparisonFilter(ComparisonFilter $comparisonFilter): mixed
     {
         return null;
     }
@@ -218,7 +220,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param HasFilter $hasFilter
      * @return mixed
      */
-    public function visitHasFilter(HasFilter $hasFilter)
+    public function visitHasFilter(HasFilter $hasFilter): mixed
     {
         return null;
     }
@@ -227,7 +229,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param EqualOperator $equalOperator
      * @return mixed
      */
-    public function visitEqualOperator(EqualOperator $equalOperator)
+    public function visitEqualOperator(EqualOperator $equalOperator): mixed
     {
         return null;
     }
@@ -236,7 +238,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param NotEqualOperator $notEqualOperator
      * @return mixed
      */
-    public function visitNotEqualOperator(NotEqualOperator $notEqualOperator)
+    public function visitNotEqualOperator(NotEqualOperator $notEqualOperator): mixed
     {
         return null;
     }
@@ -245,7 +247,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param GreaterThanOperator $greaterThanOperator
      * @return mixed
      */
-    public function visitGreaterThanOperator(GreaterThanOperator $greaterThanOperator)
+    public function visitGreaterThanOperator(GreaterThanOperator $greaterThanOperator): mixed
     {
         return null;
     }
@@ -254,7 +256,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param GreaterThanOrEqualOperator $greaterThanOrEqualOperator
      * @return mixed
      */
-    public function visitGreaterThanOrEqualOperator(GreaterThanOrEqualOperator $greaterThanOrEqualOperator)
+    public function visitGreaterThanOrEqualOperator(GreaterThanOrEqualOperator $greaterThanOrEqualOperator): mixed
     {
         return null;
     }
@@ -263,7 +265,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param LessThanOperator $lessThanOperator
      * @return mixed
      */
-    public function visitLessThanOperator(LessThanOperator $lessThanOperator)
+    public function visitLessThanOperator(LessThanOperator $lessThanOperator): mixed
     {
         return null;
     }
@@ -272,7 +274,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param LessThanOrEqualOperator $lessThanOrEqualOperator
      * @return mixed
      */
-    public function visitLessThanOrEqualOperator(LessThanOrEqualOperator $lessThanOrEqualOperator)
+    public function visitLessThanOrEqualOperator(LessThanOrEqualOperator $lessThanOrEqualOperator): mixed
     {
         return null;
     }
@@ -281,7 +283,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param AndOperator $andOperator
      * @return mixed
      */
-    public function visitAndOperator(AndOperator $andOperator)
+    public function visitAndOperator(AndOperator $andOperator): mixed
     {
         return null;
     }
@@ -290,7 +292,7 @@ abstract class AbstractVisitor implements VisitorInterface
      * @param OrOperator $operator
      * @return mixed
      */
-    public function visitOrOperator(OrOperator $operator)
+    public function visitOrOperator(OrOperator $operator): mixed
     {
         return null;
     }

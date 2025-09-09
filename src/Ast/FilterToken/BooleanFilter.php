@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder\Ast\FilterToken;
 
 use Jojo1981\JsonPathAstBuilder\Ast\BinaryOperator\LogicalOperatorInterface;
@@ -20,13 +22,13 @@ use Jojo1981\JsonPathAstBuilder\VisitorInterface;
 class BooleanFilter implements FilterNodeInterface, VisitableInterface
 {
     /** @var LogicalOperatorInterface */
-    private $operator;
+    private LogicalOperatorInterface $operator;
 
     /** @var FilterNodeInterface */
-    private $lhs;
+    private FilterNodeInterface $lhs;
 
     /** @var FilterNodeInterface */
-    private $rhs;
+    private FilterNodeInterface $rhs;
 
     /**
      * @param LogicalOperatorInterface $operator
@@ -68,7 +70,7 @@ class BooleanFilter implements FilterNodeInterface, VisitableInterface
      * @param VisitorInterface $visitor
      * @return mixed
      */
-    public function accept(VisitorInterface $visitor)
+    public function accept(VisitorInterface $visitor): mixed
     {
         return $visitor->visitBooleanFilter($this);
     }

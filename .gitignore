@@ -1,6 +1,9 @@
-/bin
+/bin/*
+!/bin/generate.sh
+!/bin/antlr-4.13.2-complete.jar
 /build
 /var
 /vendor
+.phpunit.result.cache
 composer.lock
 phpunit.xml

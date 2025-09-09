@@ -1,6 +1,8 @@
 Json Path AST builder for PHP 
 =====================
 
+[![Build Status](https://github.com/jojo1981/json-path-ast-builder/actions/workflows/build.yml/badge.svg)](https://github.com/jojo1981/json-path-ast-builder/actions/workflows/build.yml)
+[![Coverage Status](https://coveralls.io/repos/github/jojo1981/json-path-ast-builder/badge.svg)](https://coveralls.io/github/jojo1981/json-path-ast-builder)
 [![Latest Stable Version](https://poser.pugx.org/jojo1981/json-path-ast-builder/v/stable)](https://packagist.org/packages/jojo1981/json-path-ast-builder)
 [![Total Downloads](https://poser.pugx.org/jojo1981/json-path-ast-builder/downloads)](https://packagist.org/packages/jojo1981/json-path-ast-builder)
 [![License](https://poser.pugx.org/jojo1981/json-path-ast-builder/license)](https://packagist.org/packages/jojo1981/json-path-ast-builder)

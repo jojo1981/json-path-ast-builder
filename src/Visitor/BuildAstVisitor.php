@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder\Visitor;
 
 use Antlr\Antlr4\Runtime\Tree\AbstractParseTreeVisitor;
@@ -31,10 +33,10 @@ use Jojo1981\JsonPathAstBuilder\Ast\FieldAccessor\RecursiveAnyField;
 use Jojo1981\JsonPathAstBuilder\Ast\FieldAccessor\RecursiveField;
 use Jojo1981\JsonPathAstBuilder\Ast\FieldAccessor\RootNode;
 use Jojo1981\JsonPathAstBuilder\Ast\FieldAccessorInterface;
+use Jojo1981\JsonPathAstBuilder\Ast\FilterNodeInterface;
 use Jojo1981\JsonPathAstBuilder\Ast\FilterToken\BooleanFilter;
 use Jojo1981\JsonPathAstBuilder\Ast\FilterToken\ComparisonFilter;
 use Jojo1981\JsonPathAstBuilder\Ast\FilterToken\HasFilter;
-use Jojo1981\JsonPathAstBuilder\Ast\FilterNodeInterface;
 use Jojo1981\JsonPathAstBuilder\Ast\FilterValue\FilterDirectValue\FilterDirectValueBoolean;
 use Jojo1981\JsonPathAstBuilder\Ast\FilterValue\FilterDirectValue\FilterDirectValueNull;
 use Jojo1981\JsonPathAstBuilder\Ast\FilterValue\FilterDirectValue\FilterDirectValueNumber\FilterDirectValueFloat;
@@ -159,7 +161,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param ChildAccessContext $context
-     * @return null|PathNodeInterface
+     * @return PathNodeInterface|null
      */
     public function visitChildAccess(ChildAccessContext $context): ?PathNodeInterface
     {
@@ -172,22 +174,19 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param FieldAccessorContext $context
-     * @return null|FieldAccessorInterface
+     * @return FieldAccessorInterface|null
      */
     public function visitFieldAccessor(FieldAccessorContext $context): ?FieldAccessorInterface
     {
         $parserRuleContext = $context->dotField() ?? $context->recursiveSubscriptFilter() ?? $context->recursiveAny()
             ?? $context->recursiveField() ?? $context->anyChild() ?? $context->subscriptField();
-        if (null !== $parserRuleContext) {
-            return $parserRuleContext->accept($this);
-        }
 
-        return null;
+        return $parserRuleContext?->accept($this);
     }
 
     /**
      * @param DotFieldContext $context
-     * @return null|Field
+     * @return Field|null
      */
     public function visitDotField(DotFieldContext $context): ?Field
     {
@@ -200,7 +199,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param RecursiveSubscriptFilterContext $context
-     * @return null|RecursiveFilterToken
+     * @return RecursiveFilterToken|null
      */
     public function visitRecursiveSubscriptFilter(RecursiveSubscriptFilterContext $context): ?RecursiveFilterToken
     {
@@ -222,7 +221,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param RecursiveFieldContext $context
-     * @return null|RecursiveField
+     * @return RecursiveField|null
      */
     public function visitRecursiveField(RecursiveFieldContext $context): ?RecursiveField
     {
@@ -261,7 +260,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param ArrayAccessorContext $context
-     * @return null|ArrayAccessorInterface
+     * @return ArrayAccessorInterface|null
      */
     public function visitArrayAccessor(ArrayAccessorContext $context): ?ArrayAccessorInterface
     {
@@ -327,7 +326,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param SubscriptFilterContext $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitSubscriptFilter(SubscriptFilterContext $context): ?FilterNodeInterface
     {
@@ -340,21 +339,18 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param BooleanExpressionContext $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitBooleanExpression(BooleanExpressionContext $context): ?FilterNodeInterface
     {
         $parserRuleContext = $context->andExpression() ?? $context->orExpression() ?? $context->expression();
-        if (null !== $parserRuleContext) {
-            return $parserRuleContext->accept($this);
-        }
 
-        return null;
+        return $parserRuleContext?->accept($this);
     }
 
     /**
      * @param AndExpressionContext $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitAndExpression(AndExpressionContext $context): ?FilterNodeInterface
     {
@@ -378,7 +374,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param OrExpressionContext $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitOrExpression(OrExpressionContext $context): ?FilterNodeInterface
     {
@@ -402,7 +398,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param ExpressionContext $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitExpression(ExpressionContext $context): ?FilterNodeInterface
     {
@@ -415,7 +411,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param Expression1Context $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitExpression1(Expression1Context $context): ?FilterNodeInterface
     {
@@ -435,7 +431,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param Expression2Context $context
-     * @return null|FilterNodeInterface
+     * @return FilterNodeInterface|null
      */
     public function visitExpression2(Expression2Context $context): ?FilterNodeInterface
     {
@@ -469,18 +465,14 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param ValueContext $context
-     * @return null|FilterDirectValueInterface
+     * @return FilterDirectValueInterface|null
      */
     public function visitValue(ValueContext $context): ?FilterDirectValueInterface
     {
         $parserRuleContext = $context->booleanValue() ?? $context->numberValue() ?? $context->nullValue()
             ?? $context->stringValue();
 
-        if ($parserRuleContext) {
-            return $parserRuleContext->accept($this);
-        }
-
-        return null;
+        return $parserRuleContext?->accept($this);
     }
 
     /**
@@ -494,9 +486,9 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param NumberValueContext $context
-     * @return null|FilterDirectValueFloat
+     * @return FilterDirectValueFloat|FilterDirectValueInteger|null
      */
-    public function visitNumberValue(NumberValueContext $context): ?FilterDirectValueInterface
+    public function visitNumberValue(NumberValueContext $context): FilterDirectValueFloat|FilterDirectValueInteger|null
     {
         if (null !== $floatContext = $context->float()) {
             return new FilterDirectValueFloat($floatContext->accept($this));
@@ -519,7 +511,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param StringValueContext $context
-     * @return null|FilterDirectValueString
+     * @return FilterDirectValueString|null
      */
     public function visitStringValue(StringValueContext $context): ?FilterDirectValueString
     {
@@ -550,18 +542,14 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param ComparisonOperatorContext $context
-     * @return null|ComparisonOperatorInterface
+     * @return ComparisonOperatorInterface|null
      */
     public function visitComparisonOperator(ComparisonOperatorContext $context): ?ComparisonOperatorInterface
     {
         $parserRuleContext= $context->equalOperator() ?? $context->notEqualOperator() ?? $context->greaterOperator()
             ?? $context->greaterOrEqualOperator() ?? $context->lessOperator() ?? $context->lessOrEqualOperator();
 
-        if (null !== $parserRuleContext) {
-            return $parserRuleContext->accept($this);
-        }
-
-        return null;
+        return $parserRuleContext?->accept($this);
     }
 
     /**
@@ -620,7 +608,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param StringContext $context
-     * @return null|string
+     * @return string|null
      */
     public function visitString(StringContext $context): ?string
     {
@@ -634,7 +622,7 @@ class BuildAstVisitor extends AbstractParseTreeVisitor implements JsonPathVisito
 
     /**
      * @param IntegerContext $context
-     * @return null|int
+     * @return int|null
      */
     public function visitInteger(IntegerContext $context): ?int
     {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Generated from ./resources/JsonPath.g4 by ANTLR 4.7.2
+ * Generated from ./resources/JsonPath.g4 by ANTLR 4.13.2
  */
 
 namespace Jojo1981\JsonPathAstBuilder\Parser;
