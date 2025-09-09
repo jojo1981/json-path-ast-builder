@@ -2,18 +2,14 @@
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
- * Copyright (c) 2020 Joost Nijhuis <jnijhuis81@gmail.com>
+ * Copyright (c) 2025 Joost Nijhuis <jnijhuis81@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
 declare(strict_types=1);
 
-namespace Jojo1981\JsonPathAstBuilder\Ast;
+require_once __DIR__ . '/../vendor/autoload.php';
 
-/**
- * @package Jojo1981\JsonPathAstBuilder\Ast
- */
-interface FieldAccessorInterface extends PathNodeInterface
-{
-}
+/** @noinspection PhpUnhandledExceptionInspection */
+DG\BypassFinals::enable();

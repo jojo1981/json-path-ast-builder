@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder\Ast\FieldAccessor;
 
 use Jojo1981\JsonPathAstBuilder\Ast\FieldAccessorInterface;
@@ -19,7 +21,7 @@ use Jojo1981\JsonPathAstBuilder\VisitorInterface;
 class MultiField implements FieldAccessorInterface, VisitableInterface
 {
     /** @var string[] */
-    private $fieldNames;
+    private array $fieldNames;
 
     /**
      * @param string[] $fieldNames
@@ -41,7 +43,7 @@ class MultiField implements FieldAccessorInterface, VisitableInterface
      * @param VisitorInterface $visitor
      * @return mixed
      */
-    public function accept(VisitorInterface $visitor)
+    public function accept(VisitorInterface $visitor): mixed
     {
         return $visitor->visitMultiField($this);
     }

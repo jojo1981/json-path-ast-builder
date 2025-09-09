@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder\Ast\ArrayAccessor;
 
 use Jojo1981\JsonPathAstBuilder\Ast\ArrayAccessorInterface;
@@ -18,18 +20,18 @@ use Jojo1981\JsonPathAstBuilder\VisitorInterface;
  */
 class ArraySlice implements ArrayAccessorInterface, VisitableInterface
 {
-    /** @var null|int */
-    private $start;
+    /** @var int|null */
+    private ?int $start;
 
-    /** @var null|int */
-    private $stop;
+    /** @var int|null */
+    private ?int $stop;
 
     /** @var int */
-    private $step;
+    private int $step;
 
     /**
-     * @param null|int $start
-     * @param null|int $stop
+     * @param int|null $start
+     * @param int|null $stop
      * @param int $step
      */
     public function __construct(?int $start = null, ?int $stop = null, int $step = 1)
@@ -40,7 +42,7 @@ class ArraySlice implements ArrayAccessorInterface, VisitableInterface
     }
 
     /**
-     * @return null|int
+     * @return int|null
      */
     public function getStart(): ?int
     {
@@ -48,7 +50,7 @@ class ArraySlice implements ArrayAccessorInterface, VisitableInterface
     }
 
     /**
-     * @return null|int
+     * @return int|null
      */
     public function getStop(): ?int
     {
@@ -67,7 +69,7 @@ class ArraySlice implements ArrayAccessorInterface, VisitableInterface
      * @param VisitorInterface $visitor
      * @return mixed
      */
-    public function accept(VisitorInterface $visitor)
+    public function accept(VisitorInterface $visitor): mixed
     {
         return $visitor->visitArraySlice($this);
     }

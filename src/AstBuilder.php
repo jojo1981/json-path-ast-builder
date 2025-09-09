@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,11 +7,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder;
 
 use Antlr\Antlr4\Runtime\CommonTokenStream;
 use Antlr\Antlr4\Runtime\Error\Exceptions\RecognitionException;
 use Antlr\Antlr4\Runtime\InputStream;
+use InvalidArgumentException;
 use Jojo1981\JsonPathAstBuilder\Ast\PathNodeInterface;
 use Jojo1981\JsonPathAstBuilder\Parser\JsonPathLexer;
 use Jojo1981\JsonPathAstBuilder\Parser\JsonPathParser;
@@ -24,8 +27,9 @@ class AstBuilder
 {
     /**
      * @param string $jsonPathExpression
-     * @throws RecognitionException
      * @return PathNodeInterface[]
+     * @throws InvalidArgumentException
+     * @throws RecognitionException
      */
     public function buildAst(string $jsonPathExpression): array
     {

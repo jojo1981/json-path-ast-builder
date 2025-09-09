@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Generated from ./resources/JsonPath.g4 by ANTLR 4.7.2
+ * Generated from ./resources/JsonPath.g4 by ANTLR 4.13.2
  */
 
 namespace Jojo1981\JsonPathAstBuilder\Parser;
@@ -22,599 +22,599 @@ class JsonPathBaseListener implements JsonPathListener
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterPath(Context\PathContext $context) : void {}
+	public function enterPath(Context\PathContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitPath(Context\PathContext $context) : void {}
+	public function exitPath(Context\PathContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterRoot(Context\RootContext $context) : void {}
+	public function enterRoot(Context\RootContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitRoot(Context\RootContext $context) : void {}
+	public function exitRoot(Context\RootContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterPathSequence(Context\PathSequenceContext $context) : void {}
+	public function enterPathSequence(Context\PathSequenceContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitPathSequence(Context\PathSequenceContext $context) : void {}
+	public function exitPathSequence(Context\PathSequenceContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterSubscriptFilter(Context\SubscriptFilterContext $context) : void {}
+	public function enterSubscriptFilter(Context\SubscriptFilterContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitSubscriptFilter(Context\SubscriptFilterContext $context) : void {}
+	public function exitSubscriptFilter(Context\SubscriptFilterContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterChildAccess(Context\ChildAccessContext $context) : void {}
+	public function enterChildAccess(Context\ChildAccessContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitChildAccess(Context\ChildAccessContext $context) : void {}
+	public function exitChildAccess(Context\ChildAccessContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterFieldAccessor(Context\FieldAccessorContext $context) : void {}
+	public function enterFieldAccessor(Context\FieldAccessorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitFieldAccessor(Context\FieldAccessorContext $context) : void {}
+	public function exitFieldAccessor(Context\FieldAccessorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterDotField(Context\DotFieldContext $context) : void {}
+	public function enterDotField(Context\DotFieldContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitDotField(Context\DotFieldContext $context) : void {}
+	public function exitDotField(Context\DotFieldContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterRecursiveSubscriptFilter(Context\RecursiveSubscriptFilterContext $context) : void {}
+	public function enterRecursiveSubscriptFilter(Context\RecursiveSubscriptFilterContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitRecursiveSubscriptFilter(Context\RecursiveSubscriptFilterContext $context) : void {}
+	public function exitRecursiveSubscriptFilter(Context\RecursiveSubscriptFilterContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterRecursiveAny(Context\RecursiveAnyContext $context) : void {}
+	public function enterRecursiveAny(Context\RecursiveAnyContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitRecursiveAny(Context\RecursiveAnyContext $context) : void {}
+	public function exitRecursiveAny(Context\RecursiveAnyContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterRecursiveField(Context\RecursiveFieldContext $context) : void {}
+	public function enterRecursiveField(Context\RecursiveFieldContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitRecursiveField(Context\RecursiveFieldContext $context) : void {}
+	public function exitRecursiveField(Context\RecursiveFieldContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterAnyChild(Context\AnyChildContext $context) : void {}
+	public function enterAnyChild(Context\AnyChildContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitAnyChild(Context\AnyChildContext $context) : void {}
+	public function exitAnyChild(Context\AnyChildContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterSubscriptField(Context\SubscriptFieldContext $context) : void {}
+	public function enterSubscriptField(Context\SubscriptFieldContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitSubscriptField(Context\SubscriptFieldContext $context) : void {}
+	public function exitSubscriptField(Context\SubscriptFieldContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterArrayAccessor(Context\ArrayAccessorContext $context) : void {}
+	public function enterArrayAccessor(Context\ArrayAccessorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitArrayAccessor(Context\ArrayAccessorContext $context) : void {}
+	public function exitArrayAccessor(Context\ArrayAccessorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterArrayAll(Context\ArrayAllContext $context) : void {}
+	public function enterArrayAll(Context\ArrayAllContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitArrayAll(Context\ArrayAllContext $context) : void {}
+	public function exitArrayAll(Context\ArrayAllContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterArraySlice(Context\ArraySliceContext $context) : void {}
+	public function enterArraySlice(Context\ArraySliceContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitArraySlice(Context\ArraySliceContext $context) : void {}
+	public function exitArraySlice(Context\ArraySliceContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterArrayRandomAccess(Context\ArrayRandomAccessContext $context) : void {}
+	public function enterArrayRandomAccess(Context\ArrayRandomAccessContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitArrayRandomAccess(Context\ArrayRandomAccessContext $context) : void {}
+	public function exitArrayRandomAccess(Context\ArrayRandomAccessContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterBooleanExpression(Context\BooleanExpressionContext $context) : void {}
+	public function enterBooleanExpression(Context\BooleanExpressionContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitBooleanExpression(Context\BooleanExpressionContext $context) : void {}
+	public function exitBooleanExpression(Context\BooleanExpressionContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterAndExpression(Context\AndExpressionContext $context) : void {}
+	public function enterAndExpression(Context\AndExpressionContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitAndExpression(Context\AndExpressionContext $context) : void {}
+	public function exitAndExpression(Context\AndExpressionContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterOrExpression(Context\OrExpressionContext $context) : void {}
+	public function enterOrExpression(Context\OrExpressionContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitOrExpression(Context\OrExpressionContext $context) : void {}
+	public function exitOrExpression(Context\OrExpressionContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterExpression(Context\ExpressionContext $context) : void {}
+	public function enterExpression(Context\ExpressionContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitExpression(Context\ExpressionContext $context) : void {}
+	public function exitExpression(Context\ExpressionContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterExpression1(Context\Expression1Context $context) : void {}
+	public function enterExpression1(Context\Expression1Context $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitExpression1(Context\Expression1Context $context) : void {}
+	public function exitExpression1(Context\Expression1Context $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterExpression2(Context\Expression2Context $context) : void {}
+	public function enterExpression2(Context\Expression2Context $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitExpression2(Context\Expression2Context $context) : void {}
+	public function exitExpression2(Context\Expression2Context $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterSubQuery(Context\SubQueryContext $context) : void {}
+	public function enterSubQuery(Context\SubQueryContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitSubQuery(Context\SubQueryContext $context) : void {}
+	public function exitSubQuery(Context\SubQueryContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterCurrent(Context\CurrentContext $context) : void {}
+	public function enterCurrent(Context\CurrentContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitCurrent(Context\CurrentContext $context) : void {}
+	public function exitCurrent(Context\CurrentContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterValue(Context\ValueContext $context) : void {}
+	public function enterValue(Context\ValueContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitValue(Context\ValueContext $context) : void {}
+	public function exitValue(Context\ValueContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterStringValue(Context\StringValueContext $context) : void {}
+	public function enterStringValue(Context\StringValueContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitStringValue(Context\StringValueContext $context) : void {}
+	public function exitStringValue(Context\StringValueContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterNumberValue(Context\NumberValueContext $context) : void {}
+	public function enterNumberValue(Context\NumberValueContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitNumberValue(Context\NumberValueContext $context) : void {}
+	public function exitNumberValue(Context\NumberValueContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterBooleanValue(Context\BooleanValueContext $context) : void {}
+	public function enterBooleanValue(Context\BooleanValueContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitBooleanValue(Context\BooleanValueContext $context) : void {}
+	public function exitBooleanValue(Context\BooleanValueContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterNullValue(Context\NullValueContext $context) : void {}
+	public function enterNullValue(Context\NullValueContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitNullValue(Context\NullValueContext $context) : void {}
+	public function exitNullValue(Context\NullValueContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterAndOperator(Context\AndOperatorContext $context) : void {}
+	public function enterAndOperator(Context\AndOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitAndOperator(Context\AndOperatorContext $context) : void {}
+	public function exitAndOperator(Context\AndOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterOrOperator(Context\OrOperatorContext $context) : void {}
+	public function enterOrOperator(Context\OrOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitOrOperator(Context\OrOperatorContext $context) : void {}
+	public function exitOrOperator(Context\OrOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterComparisonOperator(Context\ComparisonOperatorContext $context) : void {}
+	public function enterComparisonOperator(Context\ComparisonOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitComparisonOperator(Context\ComparisonOperatorContext $context) : void {}
+	public function exitComparisonOperator(Context\ComparisonOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterEqualOperator(Context\EqualOperatorContext $context) : void {}
+	public function enterEqualOperator(Context\EqualOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitEqualOperator(Context\EqualOperatorContext $context) : void {}
+	public function exitEqualOperator(Context\EqualOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterNotEqualOperator(Context\NotEqualOperatorContext $context) : void {}
+	public function enterNotEqualOperator(Context\NotEqualOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitNotEqualOperator(Context\NotEqualOperatorContext $context) : void {}
+	public function exitNotEqualOperator(Context\NotEqualOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterGreaterOrEqualOperator(Context\GreaterOrEqualOperatorContext $context) : void {}
+	public function enterGreaterOrEqualOperator(Context\GreaterOrEqualOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitGreaterOrEqualOperator(Context\GreaterOrEqualOperatorContext $context) : void {}
+	public function exitGreaterOrEqualOperator(Context\GreaterOrEqualOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterGreaterOperator(Context\GreaterOperatorContext $context) : void {}
+	public function enterGreaterOperator(Context\GreaterOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitGreaterOperator(Context\GreaterOperatorContext $context) : void {}
+	public function exitGreaterOperator(Context\GreaterOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterLessOrEqualOperator(Context\LessOrEqualOperatorContext $context) : void {}
+	public function enterLessOrEqualOperator(Context\LessOrEqualOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitLessOrEqualOperator(Context\LessOrEqualOperatorContext $context) : void {}
+	public function exitLessOrEqualOperator(Context\LessOrEqualOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterLessOperator(Context\LessOperatorContext $context) : void {}
+	public function enterLessOperator(Context\LessOperatorContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitLessOperator(Context\LessOperatorContext $context) : void {}
+	public function exitLessOperator(Context\LessOperatorContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterIdentifier(Context\IdentifierContext $context) : void {}
+	public function enterIdentifier(Context\IdentifierContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitIdentifier(Context\IdentifierContext $context) : void {}
+	public function exitIdentifier(Context\IdentifierContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterUnsignedInteger(Context\UnsignedIntegerContext $context) : void {}
+	public function enterUnsignedInteger(Context\UnsignedIntegerContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitUnsignedInteger(Context\UnsignedIntegerContext $context) : void {}
+	public function exitUnsignedInteger(Context\UnsignedIntegerContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterSignedInteger(Context\SignedIntegerContext $context) : void {}
+	public function enterSignedInteger(Context\SignedIntegerContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitSignedInteger(Context\SignedIntegerContext $context) : void {}
+	public function exitSignedInteger(Context\SignedIntegerContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterInteger(Context\IntegerContext $context) : void {}
+	public function enterInteger(Context\IntegerContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitInteger(Context\IntegerContext $context) : void {}
+	public function exitInteger(Context\IntegerContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterFloat(Context\FloatContext $context) : void {}
+	public function enterFloat(Context\FloatContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitFloat(Context\FloatContext $context) : void {}
+	public function exitFloat(Context\FloatContext $context): void {}
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterString(Context\StringContext $context) : void {}
+	public function enterString(Context\StringContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitString(Context\StringContext $context) : void {}
+	public function exitString(Context\StringContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function enterEveryRule(ParserRuleContext $context) : void {}
+	public function enterEveryRule(ParserRuleContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function exitEveryRule(ParserRuleContext $context) : void {}
+	public function exitEveryRule(ParserRuleContext $context): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function visitTerminal(TerminalNode $node) : void {}
+	public function visitTerminal(TerminalNode $node): void {}
 
 	/**
 	 * {@inheritdoc}
 	 *
 	 * The default implementation does nothing.
 	 */
-	public function visitErrorNode(ErrorNode $node) : void {}
+	public function visitErrorNode(ErrorNode $node): void {}
 }

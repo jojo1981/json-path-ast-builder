@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of the jojo1981/json-path-ast-builder package
  *
@@ -7,6 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed in the root of the source code
  */
+declare(strict_types=1);
+
 namespace Jojo1981\JsonPathAstBuilder\Ast\FilterValue;
 
 use Jojo1981\JsonPathAstBuilder\Ast\FilterValueInterface;
@@ -20,7 +22,7 @@ use Jojo1981\JsonPathAstBuilder\VisitorInterface;
 class SubQuery implements FilterValueInterface, VisitableInterface
 {
     /** @var PathNodeInterface[] */
-    private $path;
+    private array $path;
 
     /**
      * @param PathNodeInterface[] $path
@@ -42,7 +44,7 @@ class SubQuery implements FilterValueInterface, VisitableInterface
      * @param VisitorInterface $visitor
      * @return mixed
      */
-    public function accept(VisitorInterface $visitor)
+    public function accept(VisitorInterface $visitor): mixed
     {
         return $visitor->visitSubQuery($this);
     }
